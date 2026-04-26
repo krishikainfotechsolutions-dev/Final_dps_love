@@ -1,16 +1,46 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import WhatsAppFab from "@/components/layout/WhatsAppFab";
+import ScrollProgress from "@/components/layout/ScrollProgress";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import Notices from "@/components/sections/Notices";
+import Events from "@/components/sections/Events";
+import Staff from "@/components/sections/Staff";
+import Gallery from "@/components/sections/Gallery";
+import Toppers from "@/components/sections/Toppers";
+import KeyDates from "@/components/sections/KeyDates";
+import Awards from "@/components/sections/Awards";
+import Contact from "@/components/sections/Contact";
+import { SCHOOL } from "@/lib/seed";
+import { useEffect } from "react";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+export default function Index() {
+  useEffect(() => {
+    document.title = `${SCHOOL.name} | ${SCHOOL.tagline}`;
+    const meta = document.querySelector('meta[name="description"]') || (() => {
+      const m = document.createElement("meta"); m.setAttribute("name", "description"); document.head.appendChild(m); return m;
+    })();
+    meta.setAttribute("content", `${SCHOOL.shortName} in ${SCHOOL.city} — admissions open. ${SCHOOL.tagline}. Notices, events, faculty and gallery.`);
+  }, []);
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <ScrollProgress />
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Notices />
+        <Events />
+        <Staff />
+        <Gallery />
+        <Toppers />
+        <KeyDates />
+        <Awards />
+        <Contact />
+      </main>
+      <Footer />
+      <WhatsAppFab />
     </div>
   );
-};
-
-const Index = PlaceholderIndex;
-
-export default Index;
+}

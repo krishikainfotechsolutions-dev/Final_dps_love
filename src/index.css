@@ -8,35 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand: Dehradoon Public Sr. Sec. School — Green & Gold */
+    --background: 60 33% 99%;
+    --foreground: 150 40% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 150 40% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 150 40% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 145 83% 26%;        /* #0B7A3B */
+    --primary-foreground: 60 33% 99%;
+    --primary-glow: 145 70% 40%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 44 94% 48%;        /* #F4B400 gold */
+    --secondary-foreground: 150 40% 12%;
+    --gold: 44 94% 48%;
+    --gold-foreground: 150 40% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 145 20% 95%;
+    --muted-foreground: 150 15% 38%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 44 94% 92%;
+    --accent-foreground: 150 40% 12%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 60 33% 99%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 145 20% 88%;
+    --input: 145 20% 88%;
+    --ring: 145 83% 26%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Gradients & effects */
+    --gradient-hero: radial-gradient(at 20% 20%, hsl(145 83% 26% / 0.85) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(44 94% 48% / 0.55) 0px, transparent 50%),
+                     radial-gradient(at 80% 80%, hsl(145 70% 40% / 0.7) 0px, transparent 50%),
+                     linear-gradient(135deg, hsl(145 83% 18%) 0%, hsl(145 83% 26%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(44 94% 55%) 0%, hsl(44 94% 42%) 100%);
+    --shadow-elegant: 0 20px 60px -20px hsl(145 83% 26% / 0.35);
+    --shadow-glow: 0 0 40px hsl(44 94% 55% / 0.4);
+    --shadow-card: 0 10px 40px -15px hsl(145 40% 15% / 0.18);
+    --glass-bg: hsla(0, 0%, 100%, 0.65);
+    --glass-border: hsla(145, 83%, 26%, 0.15);
+
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,7 +75,7 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 150 40% 6%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -101,5 +120,62 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid var(--glass-border);
+  }
+  .glass-dark {
+    background: hsla(150, 40%, 8%, 0.55);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid hsla(44, 94%, 48%, 0.2);
+  }
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-hero { background: var(--gradient-hero); }
+  .bg-gold { background: var(--gradient-gold); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .hover-lift {
+    transition: transform 0.4s var(--transition-smooth), box-shadow 0.4s var(--transition-smooth);
+  }
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-elegant);
+  }
+  /* hide scrollbars on horizontal carousels */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .shimmer {
+    background: linear-gradient(90deg, transparent, hsla(44,94%,55%,0.35), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s infinite;
   }
 }
