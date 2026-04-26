@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.jpg";
-import campusHero from "@/assets/campus-2.jpg";
 import { SCHOOL } from "@/lib/seed";
 
 export default function Hero() {
@@ -15,25 +14,11 @@ export default function Hero() {
   const go = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section ref={ref} id="hero" className="relative min-h-[100svh] flex items-center justify-center overflow-hidden text-primary-foreground py-24 md:py-20">
-      {/* Full-bleed campus photo background */}
-      <div className="absolute inset-0 -z-10">
-        <motion.img
-          src={campusHero}
-          alt="Dehradoon Public School campus"
-          className="w-full h-full object-cover"
-          initial={{ scale: 1.15 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 8, ease: [0.22, 1, 0.36, 1] }}
-        />
-        {/* Premium gradient overlays for legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(150_60%_8%/0.85)] via-[hsl(145_60%_12%/0.7)] to-[hsl(150_70%_6%/0.95)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(at_20%_30%,hsl(var(--primary)/0.35),transparent_55%),radial-gradient(at_80%_80%,hsl(var(--gold)/0.25),transparent_55%)]" />
-        <div className="absolute inset-0 opacity-[0.05] mix-blend-overlay" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
-      </div>
-      {/* Subtle floating accents */}
-      <motion.div className="absolute -top-32 -left-32 w-80 h-80 rounded-full bg-gold/10 blur-3xl" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }} />
-      <motion.div className="absolute -bottom-32 -right-32 w-[24rem] h-[24rem] rounded-full bg-primary-glow/15 blur-3xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }} />
+    <section ref={ref} id="hero" className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-hero text-primary-foreground py-24 md:py-20">
+      {/* Animated decorative shapes */}
+      <motion.div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-gold/20 blur-3xl" animate={{ scale: [1, 1.2, 1], rotate: [0, 30, 0] }} transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }} />
+      <motion.div className="absolute -bottom-32 -right-32 w-[28rem] h-[28rem] rounded-full bg-primary-glow/30 blur-3xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }} />
+      <div className="absolute inset-0 opacity-[0.06] mix-blend-overlay" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
 
       <motion.div style={{ y, opacity }} className="container mx-auto px-4 relative z-10 text-center">
         <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} className="flex justify-center">
