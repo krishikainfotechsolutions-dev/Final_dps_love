@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.jpg";
+import campusBg from "@/assets/campus-2.jpg";
 import { SCHOOL } from "@/lib/seed";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -25,9 +26,23 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-hero text-primary-foreground py-24 md:py-20"
     >
-      {/* Minimal backdrop: brand gradient (bg-hero) + faint dot grid only. No animated blobs. */}
+      {/* School photo background with brand gradient overlay for legibility */}
+      <div className="absolute inset-0 -z-0">
+        <img
+          src={campusBg}
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+        />
+        {/* Brand green/gold gradient veil */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(150_70%_8%/0.85)] via-[hsl(145_60%_14%/0.75)] to-[hsl(150_70%_6%/0.95)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(at_20%_30%,hsl(var(--primary)/0.35),transparent_55%),radial-gradient(at_80%_80%,hsl(var(--gold)/0.22),transparent_55%)]" />
+      </div>
+      {/* Faint dot grid */}
       <div
-        className="absolute inset-0 opacity-[0.05] mix-blend-overlay pointer-events-none"
+        className="absolute inset-0 opacity-[0.05] mix-blend-overlay pointer-events-none z-0"
         style={{
           backgroundImage:
             "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
@@ -35,7 +50,7 @@ export default function Hero() {
         }}
       />
       {/* Soft vignette for premium feel */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,hsl(150_70%_6%/0.55)_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,hsl(150_70%_6%/0.65)_100%)] pointer-events-none z-0" />
 
       <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
         {/* Logo — subtle glass ring, no pulsing halo */}
