@@ -26,22 +26,22 @@ export default function Events() {
               key={e.id}
               variants={fadeUp}
               onClick={() => openEvent(e)}
-              className="group relative shrink-0 snap-start w-[280px] md:w-[340px] aspect-[3/4] rounded-3xl overflow-hidden text-left shadow-card hover:shadow-elegant transition-all"
+              className="group relative shrink-0 snap-start w-[200px] sm:w-[230px] md:w-[260px] aspect-[4/5] rounded-2xl overflow-hidden text-left shadow-card hover:shadow-elegant transition-all"
               whileHover={{ y: -6 }}
             >
-              <img src={e.coverImage} alt={e.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={e.coverImage} alt={e.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent" />
-              <div className="absolute top-4 left-4 bg-gold text-gold-foreground text-[10px] font-bold px-3 py-1.5 rounded-full">
+              <div className="absolute top-3 left-3 bg-gold text-gold-foreground text-[10px] font-bold px-2.5 py-1 rounded-full">
                 {new Date(e.date).toLocaleDateString("en-IN", { day: "2-digit", month: "short" })}
               </div>
               {e.images?.length > 1 && (
-                <div className="absolute top-4 right-4 inline-flex items-center gap-1 bg-black/50 text-white text-[10px] font-semibold px-2 py-1 rounded-full">
+                <div className="absolute top-3 right-3 inline-flex items-center gap-1 bg-black/50 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full">
                   <Images className="w-3 h-3" /> {e.images.length}
                 </div>
               )}
-              <div className="absolute bottom-0 left-0 right-0 p-5 text-primary-foreground">
-                <h3 className="text-xl font-bold leading-tight">{e.title}</h3>
-                <p className="mt-1 text-xs opacity-80 flex items-center gap-1"><MapPin className="w-3 h-3" /> {e.location}</p>
+              <div className="absolute bottom-0 left-0 right-0 p-4 text-primary-foreground">
+                <h3 className="text-base sm:text-lg font-bold leading-tight line-clamp-2">{e.title}</h3>
+                <p className="mt-1 text-[11px] opacity-80 flex items-center gap-1 truncate"><MapPin className="w-3 h-3 shrink-0" /> {e.location}</p>
               </div>
             </motion.button>
           ))}
