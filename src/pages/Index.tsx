@@ -4,6 +4,7 @@ import WhatsAppFab from "@/components/layout/WhatsAppFab";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import PrincipalDesk from "@/components/sections/PrincipalDesk";
 import Notices from "@/components/sections/Notices";
 import Events from "@/components/sections/Events";
 import Staff from "@/components/sections/Staff";
@@ -30,6 +31,7 @@ export default function Index() {
       <main>
         <Hero />
         <About />
+        <PrincipalDesk />
         <Notices />
         <Events />
         <Staff />

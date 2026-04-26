@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/context/AuthContext";
 import { ContentProvider } from "@/context/ContentContext";
+import SplashScreen from "@/components/layout/SplashScreen";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import AdminLogin from "./pages/AdminLogin.tsx";
@@ -17,6 +18,7 @@ const App = () => (
     <TooltipProvider>
       <AuthProvider>
         <ContentProvider>
+          <SplashScreen />
           <Toaster />
           <Sonner />
           <BrowserRouter>

@@ -14,7 +14,7 @@ export default function Notices() {
         <div className="relative overflow-hidden mb-10 rounded-2xl border border-gold/30 bg-card py-3">
           <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-card to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-card to-transparent z-10" />
-          <div className="flex gap-10 animate-marquee whitespace-nowrap">
+          <div className="flex gap-10 animate-marquee-fast whitespace-nowrap">
             {marqueeItems.map((n: any, i: number) => (
               <span key={i} className="inline-flex items-center gap-2 text-sm">
                 <Bell className="w-4 h-4 text-gold shrink-0" />

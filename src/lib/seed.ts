@@ -27,11 +27,11 @@ export const seedNotices = [
 ];
 
 export const seedEvents = [
-  { id: "e1", title: "Independence Day Celebration", description: "Patriotic performances, flag hoisting and cultural programs by our students celebrating 79 years of freedom.", date: "2024-08-15", location: "School Auditorium", coverImage: indep1 },
-  { id: "e2", title: "Janmashtami Festival", description: "Students dressed as Krishna and Radha, devotional songs, dance performances and traditional Dahi Handi celebration.", date: "2024-08-26", location: "School Ground", coverImage: janm1 },
-  { id: "e3", title: "Annual Sports Meet", description: "Three-day sports extravaganza with athletics, team sports and inter-house competitions.", date: "2024-12-12", location: "Sports Field", coverImage: campus3 },
-  { id: "e4", title: "Science Exhibition", description: "Innovative student-led projects in robotics, sustainability and applied physics.", date: "2025-01-20", location: "Science Block", coverImage: campus2 },
-  { id: "e5", title: "Annual Day Function", description: "An evening of music, drama and dance celebrating the talents of our students.", date: "2025-02-14", location: "Main Auditorium", coverImage: campus1 },
+  { id: "e1", title: "Independence Day Celebration", description: "Patriotic performances, flag hoisting and cultural programs by our students celebrating 79 years of freedom.", date: "2024-08-15", location: "School Auditorium", coverImage: indep1, images: [indep1, indep2, campus1] },
+  { id: "e2", title: "Janmashtami Festival", description: "Students dressed as Krishna and Radha, devotional songs, dance performances and traditional Dahi Handi celebration.", date: "2024-08-26", location: "School Ground", coverImage: janm1, images: [janm1, janm2, indep2] },
+  { id: "e3", title: "Annual Sports Meet", description: "Three-day sports extravaganza with athletics, team sports and inter-house competitions.", date: "2024-12-12", location: "Sports Field", coverImage: campus3, images: [campus3, campus1, campus2] },
+  { id: "e4", title: "Science Exhibition", description: "Innovative student-led projects in robotics, sustainability and applied physics.", date: "2025-01-20", location: "Science Block", coverImage: campus2, images: [campus2, campus1, campus3] },
+  { id: "e5", title: "Annual Day Function", description: "An evening of music, drama and dance celebrating the talents of our students.", date: "2025-02-14", location: "Main Auditorium", coverImage: campus1, images: [campus1, indep1, janm1] },
 ];
 
 export const seedStaff = [
@@ -41,7 +41,32 @@ export const seedStaff = [
   { id: "s4", name: "Mr. Suresh Tiwari", role: "Science HOD", subjects: ["Physics", "Chemistry"], bio: "Leading our STEM curriculum with inquiry-based learning.", photo: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" },
   { id: "s5", name: "Ms. Kavita Singh", role: "Sports Coordinator", subjects: ["Physical Education"], bio: "National-level athlete coaching state champions in cricket & athletics.", photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" },
   { id: "s6", name: "Mr. Anil Pandey", role: "Computer Science", subjects: ["Computer Science", "AI"], bio: "Introducing students to AI, robotics and modern programming.", photo: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" },
+  { id: "s7", name: "Mrs. Sunita Yadav", role: "Hindi HOD", subjects: ["Hindi", "Sanskrit"], bio: "Sahitya Ratna with a love for classical literature.", photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" },
+  { id: "s8", name: "Mr. Deepak Joshi", role: "Maths Faculty", subjects: ["Mathematics"], bio: "Olympiad mentor and JEE foundation coach.", photo: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&q=80" },
+  { id: "s9", name: "Ms. Neha Kapoor", role: "Biology Faculty", subjects: ["Biology"], bio: "NEET mentor with 12 years of teaching experience.", photo: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&q=80" },
+  { id: "s10", name: "Mr. Vivek Saxena", role: "Commerce HOD", subjects: ["Accounts", "Business Studies"], bio: "Chartered Accountant turned passionate educator.", photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
+  { id: "s11", name: "Mrs. Pooja Bhatt", role: "Pre-Primary Head", subjects: ["Early Childhood"], bio: "Specialist in play-based and Montessori learning.", photo: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80" },
+  { id: "s12", name: "Mr. Ramesh Dubey", role: "Social Science", subjects: ["History", "Civics"], bio: "Storyteller bringing history alive in the classroom.", photo: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400&q=80" },
+  { id: "s13", name: "Ms. Ritu Khanna", role: "Art & Craft", subjects: ["Visual Arts"], bio: "Award-winning artist guiding young creators.", photo: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=80" },
+  { id: "s14", name: "Mr. Aakash Bansal", role: "Music Teacher", subjects: ["Music"], bio: "Classically trained vocalist and tabla player.", photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80" },
+  { id: "s15", name: "Ms. Shilpa Goyal", role: "Geography Faculty", subjects: ["Geography"], bio: "Field-trip enthusiast and cartography expert.", photo: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80" },
+  { id: "s16", name: "Mr. Prakash Trivedi", role: "Physics Faculty", subjects: ["Physics"], bio: "JEE Advanced mentor with 18 years of experience.", photo: "https://images.unsplash.com/photo-1542178243-bc20204b769f?w=400&q=80" },
+  { id: "s17", name: "Mrs. Aarti Chauhan", role: "Chemistry Faculty", subjects: ["Chemistry"], bio: "PhD in Organic Chemistry, NEET mentor.", photo: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&q=80" },
+  { id: "s18", name: "Mr. Sanjay Rastogi", role: "Economics", subjects: ["Economics"], bio: "Bringing real-world markets into the classroom.", photo: "https://images.unsplash.com/photo-1559548331-f9cb98001426?w=400&q=80" },
+  { id: "s19", name: "Ms. Megha Srivastava", role: "Counsellor", subjects: ["Psychology"], bio: "Certified child counsellor and career mentor.", photo: "https://images.unsplash.com/photo-1554151228-14d9def656e4?w=400&q=80" },
+  { id: "s20", name: "Mr. Harsh Vardhan", role: "Yoga & Wellness", subjects: ["Yoga"], bio: "Promoting mindfulness and physical wellbeing.", photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" },
+  { id: "s21", name: "Mrs. Lata Awasthi", role: "Librarian", subjects: ["Library Science"], bio: "Curating a reading culture across the school.", photo: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80" },
+  { id: "s22", name: "Mr. Tarun Chand", role: "IT Coordinator", subjects: ["Computer Science"], bio: "Robotics and Atal Tinkering Lab in-charge.", photo: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&q=80" },
 ];
+
+export const PRINCIPAL = {
+  name: "Dr. Anjali Sharma",
+  title: "Principal",
+  photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+  message:
+    "At Dehradoon Public Senior Secondary School, we believe education is more than academics — it's the joyful journey of discovering one's true potential. Our endeavour is to nurture inquisitive minds, kind hearts and confident voices. Every child here is celebrated as unique, and our dedicated faculty walks alongside each student, helping them shine brightly in their own way. Together with our parent community, we are building a generation of compassionate leaders ready to embrace tomorrow with courage and integrity.",
+  signature: "— Dr. Anjali Sharma",
+};
 
 export const seedGallery = [
   { id: "g1", title: "Independence Day", category: "Independence Day", type: "image" as const, url: indep1 },

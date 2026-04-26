@@ -112,6 +112,7 @@ export default {
         "fade-in": "fade-in 0.6s cubic-bezier(0.22,1,0.36,1) both",
         "scale-in": "scale-in 0.5s cubic-bezier(0.22,1,0.36,1) both",
         "marquee": "marquee 35s linear infinite",
+        "marquee-fast": "marquee 18s linear infinite",
         "float": "float 6s ease-in-out infinite",
         "spin-slow": "spin-slow 30s linear infinite",
       },
