@@ -19,7 +19,7 @@ export const SCHOOL = {
 
 export const seedNotices = [
   { id: "n1", title: "Annual Result Declaration 2025", body: "Class X & XII results will be declared on May 13, 2025. Parents are invited to attend the ceremony.", date: "2025-05-10", pinned: true },
-  { id: "n2", title: "Summer Vacation Notice", body: "School will remain closed for summer break from May 25 to June 30. Reopens July 1.", date: "2025-05-20", pinned: false },
+  { id: "n2", title: "Summer Vacation Notice", body917428863727: "School will remain closed for summer break from May 25 to June 30. Reopens July 1.", date: "2025-05-20", pinned: false },
   { id: "n3", title: "Admission Open 2025-26", body: "Admissions for Nursery to Class IX are now open. Limited seats available.", date: "2025-04-01", pinned: true },
   { id: "n4", title: "Parent-Teacher Meeting", body: "PTM scheduled for the second Saturday of every month from 10 AM to 1 PM.", date: "2025-04-12", pinned: false },
   { id: "n5", title: "New Smart Classrooms", body: "Smart classrooms with interactive panels installed across all sections.", date: "2025-03-15", pinned: false },
