@@ -9,6 +9,7 @@ import { SCHOOL } from "@/lib/seed";
 
 const links = [
   { id: "about", label: "About" },
+  { id: "principal", label: "Principal" },
   { id: "notices", label: "Notices" },
   { id: "events", label: "Events" },
   { id: "staff", label: "Staff" },
