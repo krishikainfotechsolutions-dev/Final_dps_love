@@ -1,15 +1,15 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Award, BookOpen, GraduationCap, Users } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
-import { fadeUp, scaleIn, stagger, viewportOnce } from "@/lib/motion";
+import { fadeUp, viewportOnce } from "@/lib/motion";
 import campusBg from "@/assets/campus-1.jpg";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const stats = [
-  { icon: GraduationCap, value: "20+", label: "Years of Excellence" },
-  { icon: Users, value: "1,200+", label: "Happy Students" },
-  { icon: BookOpen, value: "60+", label: "Expert Faculty" },
-  { icon: Award, value: "50+", label: "Awards Won" },
+  { icon: GraduationCap, value: "20+", label: "Years" },
+  { icon: Users, value: "1,200+", label: "Students" },
+  { icon: BookOpen, value: "60+", label: "Faculty" },
+  { icon: Award, value: "50+", label: "Awards" },
 ];
 
 export default function About() {
@@ -22,22 +22,6 @@ export default function About() {
       id="about"
       className="relative py-24 scroll-mt-24 overflow-hidden bg-gradient-to-b from-transparent via-muted/40 to-transparent"
     >
-      {/* Subtle brand-tinted backdrop (image only on desktop) */}
-      <div className="absolute inset-0 -z-10">
-        {!lowMotion && (
-          <img
-            src={campusBg}
-            alt=""
-            aria-hidden="true"
-            className="w-full h-full object-cover opacity-40"
-            loading="lazy"
-            decoding="async"
-          />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95" />
-        <div className="absolute inset-0 bg-[radial-gradient(at_20%_20%,hsl(var(--primary)/0.12),transparent_55%),radial-gradient(at_80%_80%,hsl(var(--gold)/0.12),transparent_55%)]" />
-      </div>
-
       <div className="container mx-auto px-4 relative">
         <SectionHeader
           eyebrow="About Us"
@@ -45,45 +29,103 @@ export default function About() {
           subtitle="We blend academic rigour with creativity, character and care."
         />
 
-        {/* Stats — match Notices card pattern: rounded-2xl, bg-card, border, gold accent hairline */}
-        <motion.div
-          variants={stagger(lowMotion ? 0 : 0.08, lowMotion ? 0.04 : 0.08)}
-          initial="hidden"
-          whileInView="show"
-          viewport={viewportOnce}
-          className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-12"
-        >
-          {stats.map((s) => (
-            <motion.div
-              key={s.label}
-              variants={scaleIn}
-              className="group relative rounded-2xl p-6 bg-card border hover-lift text-center"
-            >
-              <s.icon className="w-7 h-7 mx-auto text-gold mb-3" />
-              <p className="text-3xl md:text-4xl font-bold text-primary">{s.value}</p>
-              <p className="text-xs md:text-sm text-muted-foreground mt-1">{s.label}</p>
-              <div className="mt-4 h-px bg-gradient-to-r from-primary/30 via-gold/40 to-transparent" />
-            </motion.div>
-          ))}
-        </motion.div>
+        {/* Two-column: single hero image + text. Calm, premium, minimal. */}
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mt-2">
+          {/* Image — one statement photo with subtle gold accent frame */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportOnce}
+            className="relative order-2 lg:order-1"
+          >
+            <div className="relative rounded-2xl overflow-hidden border border-gold/30 shadow-elegant">
+              <img
+                src={campusBg}
+                alt="Dehradoon Public School campus"
+                className="w-full h-[320px] sm:h-[420px] object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              {!lowMotion && (
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/15 via-transparent to-transparent pointer-events-none" />
+              )}
+            </div>
+            {/* Floating glass badge — single subtle glassmorphism touch */}
+            <div className="absolute -bottom-5 left-5 sm:left-8 glass rounded-2xl px-5 py-3 shadow-card">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold">
+                Established
+              </p>
+              <p className="text-xl font-bold text-primary leading-none mt-1">
+                2003
+              </p>
+            </div>
+          </motion.div>
 
-        {/* Mission & Vision — Mission keeps brand gradient (consistent w/ "feature" cards), Vision uses card+border+gold accent */}
-        <div className="grid md:grid-cols-2 gap-5">
+          {/* Text */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportOnce}
+            className="order-1 lg:order-2"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+              Our Story
+            </p>
+            <h3 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight text-foreground">
+              Nurturing curious minds &{" "}
+              <span className="text-gradient-primary">kind hearts</span>
+            </h3>
+            <div className="mt-5 h-px w-24 bg-gradient-to-r from-primary/40 via-gold/50 to-transparent" />
+            <p className="mt-5 text-muted-foreground leading-relaxed">
+              For over two decades, Dehradoon Public Senior Secondary School has been a place where every child is seen, heard and inspired. We blend academic rigour with creativity, character and care — preparing students to thrive in a rapidly evolving world.
+            </p>
+
+            {/* Compact glass stat strip — one element, no per-card animation */}
+            <div className="mt-8 grid grid-cols-4 rounded-2xl border border-gold/30 glass overflow-hidden">
+              {stats.map((s, i) => (
+                <div
+                  key={s.label}
+                  className={`px-3 py-4 text-center ${
+                    i < stats.length - 1 ? "border-r border-gold/20" : ""
+                  }`}
+                >
+                  <s.icon className="w-4 h-4 mx-auto text-gold mb-1.5" />
+                  <p className="text-lg sm:text-2xl font-bold text-primary leading-none">
+                    {s.value}
+                  </p>
+                  <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">
+                    {s.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Mission & Vision — minimal cards, one accent each */}
+        <div className="grid md:grid-cols-2 gap-5 mt-16">
           <motion.article
             variants={fadeUp}
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="group relative rounded-2xl p-6 md:p-8 bg-gradient-to-br from-primary to-primary-glow text-primary-foreground border border-gold/30 shadow-elegant hover-lift"
+            className="group rounded-2xl p-6 md:p-8 bg-card border hover-lift"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gold mb-3">
-              <BookOpen className="w-4 h-4" /> Our Mission
-            </span>
-            <h3 className="text-2xl font-bold mb-3">Inspire, empower, and elevate</h3>
-            <p className="opacity-90 text-sm md:text-base">
+            <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+              <BookOpen className="w-4 h-4 text-primary" />
+            </div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary mb-2">
+              Our Mission
+            </p>
+            <h4 className="text-lg font-bold mb-2 text-foreground">
+              Inspire, empower, elevate
+            </h4>
+            <p className="text-sm text-muted-foreground leading-relaxed">
               To provide a safe, joyful and intellectually stimulating environment where children grow into confident learners and responsible citizens of tomorrow.
             </p>
-            <div className="mt-5 h-px bg-gradient-to-r from-gold/60 via-gold/30 to-transparent" />
+            <div className="mt-5 h-px bg-gradient-to-r from-primary/30 via-gold/40 to-transparent" />
           </motion.article>
 
           <motion.article
@@ -91,16 +133,21 @@ export default function About() {
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="group relative rounded-2xl p-6 md:p-8 bg-card border border-gold/30 hover-lift"
+            className="group rounded-2xl p-6 md:p-8 bg-card border border-gold/30 hover-lift"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary mb-3">
-              <Award className="w-4 h-4 text-gold" /> Our Vision
-            </span>
-            <h3 className="text-2xl font-bold mb-3 text-primary">Every child, a unique star</h3>
-            <p className="text-muted-foreground text-sm md:text-base">
+            <div className="w-9 h-9 rounded-xl bg-gold/15 flex items-center justify-center mb-4">
+              <Award className="w-4 h-4 text-foreground" />
+            </div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground/70 mb-2">
+              Our Vision
+            </p>
+            <h4 className="text-lg font-bold mb-2 text-foreground">
+              Every child, a unique star
+            </h4>
+            <p className="text-sm text-muted-foreground leading-relaxed">
               To nurture individuality, foster innovation, and prepare every student to thrive in a rapidly evolving world.
             </p>
-            <div className="mt-5 h-px bg-gradient-to-r from-primary/30 via-gold/40 to-transparent" />
+            <div className="mt-5 h-px bg-gradient-to-r from-gold/40 via-primary/30 to-transparent" />
           </motion.article>
         </div>
       </div>
