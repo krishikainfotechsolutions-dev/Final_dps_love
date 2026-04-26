@@ -39,8 +39,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     await signOut(auth);
   };
 
-  const isAdmin = Boolean(user && (!ADMIN_EMAIL || user.email === ADMIN_EMAIL));
-
+  const isAdmin = Boolean(user);
+// login successful = admin ✅   
   return (
     <Ctx.Provider value={{ user, loading, isAdmin, configured: isFirebaseConfigured, login, logout }}>
       {children}
