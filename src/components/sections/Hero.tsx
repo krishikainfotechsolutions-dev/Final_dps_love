@@ -94,9 +94,9 @@ export default function Hero() {
         <motion.div
           {...fade}
           transition={{ delay: lowMotion ? 0 : 0.15, duration: 0.5 }}
-          className="mt-5 sm:mt-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-dark text-xs md:text-sm font-medium"
+          className="mt-5 sm:mt-8 inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-gold/15 text-gold border border-gold/30"
         >
-          <Sparkles className="w-3.5 h-3.5 text-gold" /> Welcome to {SCHOOL.shortName}
+          <Sparkles className="w-3.5 h-3.5" /> Welcome to {SCHOOL.shortName}
         </motion.div>
 
         <motion.h1
@@ -116,15 +116,18 @@ export default function Hero() {
           {SCHOOL.tagline} — shaping confident, curious and compassionate learners in the heart of {SCHOOL.city}.
         </motion.p>
 
+        {/* Brand accent hairline — matches gradient divider used across cards */}
+        <div className="mx-auto mt-6 sm:mt-8 h-px w-40 bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+
         <motion.div
           {...fade}
           transition={{ delay: lowMotion ? 0.15 : 0.55, duration: 0.6 }}
-          className="mt-6 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
+          className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
         >
           <Button
             size="lg"
             onClick={() => go("about")}
-            className="bg-gold text-gold-foreground hover:opacity-90 shadow-glow group"
+            className="bg-gold text-gold-foreground hover:opacity-90 shadow-glow group border border-gold/40"
           >
             Explore School{" "}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -133,7 +136,7 @@ export default function Hero() {
             size="lg"
             variant="outline"
             onClick={() => go("contact")}
-            className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+            className="bg-white/5 border-gold/40 text-white hover:bg-white/15"
           >
             Contact Us
           </Button>
