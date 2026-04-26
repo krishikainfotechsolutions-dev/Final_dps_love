@@ -14,36 +14,36 @@ export default function Hero() {
   const go = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section ref={ref} id="hero" className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-hero text-primary-foreground">
+    <section ref={ref} id="hero" className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-hero text-primary-foreground py-24 md:py-20">
       {/* Animated decorative shapes */}
       <motion.div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-gold/20 blur-3xl" animate={{ scale: [1, 1.2, 1], rotate: [0, 30, 0] }} transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }} />
       <motion.div className="absolute -bottom-32 -right-32 w-[28rem] h-[28rem] rounded-full bg-primary-glow/30 blur-3xl" animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }} />
       <div className="absolute inset-0 opacity-[0.06] mix-blend-overlay" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
 
-      <motion.div style={{ y, opacity }} className="container mx-auto px-4 relative z-10 text-center pt-20">
+      <motion.div style={{ y, opacity }} className="container mx-auto px-4 relative z-10 text-center">
         <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} className="flex justify-center">
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-gold/30 blur-2xl animate-pulse" />
-            <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden ring-4 ring-gold/60 shadow-glow">
+            <div className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-full overflow-hidden ring-4 ring-gold/60 shadow-glow">
               <img src={logo} alt="DPS Kanpur" className="w-full h-full object-cover" />
             </div>
           </div>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.8 }} className="mt-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-dark text-xs md:text-sm font-medium">
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.8 }} className="mt-5 sm:mt-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-dark text-xs md:text-sm font-medium">
           <Sparkles className="w-3.5 h-3.5 text-gold" /> Welcome to {SCHOOL.shortName}
         </motion.div>
 
-        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.9 }} className="mt-6 text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05]">
+        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.9 }} className="mt-4 sm:mt-6 text-3xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05]">
           Dehradoon Public<br />
           <span className="text-gradient-gold">Senior Secondary School</span>
         </motion.h1>
 
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.8 }} className="mt-6 text-lg md:text-xl max-w-2xl mx-auto opacity-90">
+        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.8 }} className="mt-4 sm:mt-6 text-sm sm:text-lg md:text-xl max-w-2xl mx-auto opacity-90 px-2">
           {SCHOOL.tagline} — shaping confident, curious and compassionate learners in the heart of {SCHOOL.city}.
         </motion.p>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.8 }} className="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.8 }} className="mt-6 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <Button size="lg" onClick={() => go("about")} className="bg-gold text-gold-foreground hover:opacity-90 shadow-glow group">
             Explore School <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Button>
