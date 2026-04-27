@@ -10,7 +10,7 @@ export const SCHOOL = {
   name: "Dehradoon Public Senior Secondary School",
   shortName: "DPS Kanpur",
   tagline: "Every Child is Unique in its Own Way",
-  city: "Kanpur",
+  city: "Kanpur", 
   phone: "8517577185",
   whatsapp: "918517577185",
   email: "info@dehradoonpublicschool.in",
