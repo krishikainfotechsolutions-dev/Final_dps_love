@@ -59,7 +59,7 @@ export default function Hero() {
             <img
               src={logo}
               alt={`${SCHOOL.shortName} logo`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               loading="eager"
               decoding="async"
             />
