@@ -20,7 +20,7 @@ export default function Events() {
       <div className="container mx-auto px-4">
         <SectionHeader eyebrow="What's Happening" title="Events & Celebrations" subtitle="From cultural festivals to academic milestones — moments that make us proud." />
 
-        <motion.div variants={stagger(0.05, 0.08)} initial="hidden" whileInView="show" viewport={viewportOnce} className="flex gap-5 overflow-x-auto no-scrollbar pb-6 snap-x snap-mandatory -mx-4 px-4 items-start">
+        <motion.div variants={stagger(0.05, 0.08)} initial="hidden" whileInView="show" viewport={viewportOnce} className="flex gap-5 overflow-x-auto no-scrollbar pb-6 snap-x snap-mandatory px-2 items-start">
           {events.map((e: any, idx: number) => (
             <motion.button
               key={e.id}
