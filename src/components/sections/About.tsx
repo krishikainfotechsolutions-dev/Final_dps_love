@@ -57,7 +57,7 @@ export default function About() {
                 Established
               </p>
               <p className="text-xl font-bold text-primary leading-none mt-1">
-                2003
+                1992
               </p>
             </div>
           </motion.div>
