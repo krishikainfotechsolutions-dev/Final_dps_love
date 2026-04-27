@@ -16,7 +16,7 @@ export default function About() {
   const isMobile = useIsMobile();
   const prefersReduced = useReducedMotion();
   const lowMotion = isMobile || prefersReduced;
-
+ 
   return (
     <section
       id="about"
