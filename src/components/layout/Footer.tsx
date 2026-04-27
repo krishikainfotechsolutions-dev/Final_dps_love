@@ -7,7 +7,7 @@ export default function Footer() {
     { id: "about", label: "About" },
     { id: "notices", label: "Notices" },
     { id: "events", label: "Events" },
-    { id: "gallery", label: "Gallery" },
+    { id: "gallery", label: "Gallery" }, 
     { id: "contact", label: "Contact" },
   ];
   return (
