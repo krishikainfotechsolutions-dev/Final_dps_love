@@ -1,6 +1,7 @@
 import campus1 from "@/assets/campus-1.jpg";
 import campus2 from "@/assets/campus-2.jpg";
 import campus3 from "@/assets/campus-3.jpg";
+import principalPhoto from "@/assets/principal.jpg";
 import indep1 from "@/assets/event-independence-1.jpg";
 import indep2 from "@/assets/event-independence-2.jpg";
 import janm1 from "@/assets/event-janmashtami-1.jpg";
@@ -62,7 +63,7 @@ export const seedStaff = [
 export const PRINCIPAL = {
   name: "Mrs. Ashish Shukla",
   title: "Principal",
-  photo: "pri.png",
+  photo: "principalPhoto",
   message:
     "At Dehradoon Public Senior Secondary School, we believe education is more than academics — it's the joyful journey of discovering one's true potential. Our endeavour is to nurture inquisitive minds, kind hearts and confident voices. Every child here is celebrated as unique, and our dedicated faculty walks alongside each student, helping them shine brightly in their own way. Together with our parent community, we are building a generation of compassionate leaders ready to embrace tomorrow with courage and integrity.",
   signature: "— Mrs. Ashish Shukla",
