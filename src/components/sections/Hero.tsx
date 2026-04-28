@@ -57,17 +57,15 @@ export default function Hero() {
         <motion.div {...enter(0)} className="flex justify-center">
 
 
-<div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden ring-1 ring-gold/40 shadow-elegant">
-            <img
-              src={logo}
-              alt={`${SCHOOL.shortName} logo`}
-              className="w-full h-full object-contain"
-              loading="eager"
-              decoding="async"
-            />
-
+<div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden ring-1 ring-gold/40 shadow-elegant flex items-center justify-center p-2 bg-white">
+  <img
+    src={logo}
+    alt={`${SCHOOL.shortName} logo`}
+    className="w-full h-full object-contain"
+    loading="eager"
+    decoding="async"
+  />
 </div>
-
           
         </motion.div>
 
