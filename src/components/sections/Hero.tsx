@@ -14,7 +14,7 @@ export default function Hero() {
   const go = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
-  // Single shared entry transition — staggered by delay only
+  // Single shared entry transition — staggered by delay only 
   const enter = (delay = 0) => ({
     initial: { opacity: 0, y: lowMotion ? 0 : 14 },
     animate: { opacity: 1, y: 0 },
