@@ -66,7 +66,7 @@ export default function Hero() {
               decoding="async"
             />
 
-
+</div>
 
           
         </motion.div>
