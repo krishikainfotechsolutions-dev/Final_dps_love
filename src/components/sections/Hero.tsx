@@ -55,15 +55,20 @@ export default function Hero() {
       <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
         {/* Logo — subtle glass ring, no pulsing halo */}
         <motion.div {...enter(0)} className="flex justify-center">
-<div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full ring-2 ring-gold/50 shadow-elegant bg-white p-2">
-  <img
-    src={logo}
-    alt={`${SCHOOL.shortName} logo`}
-    className="w-full h-full object-contain"
-    loading="eager"
-    decoding="async"
-  />
-</div>
+
+
+<div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden ring-1 ring-gold/40 shadow-elegant">
+            <img
+              src={logo}
+              alt={`${SCHOOL.shortName} logo`}
+              className="w-full h-full object-contain"
+              loading="eager"
+              decoding="async"
+            />
+
+
+
+          
         </motion.div>
 
         {/* Eyebrow — matches site eyebrow pill */}
