@@ -66,7 +66,7 @@ export const PRINCIPAL = {
   photo: principalPhoto,
   message:
     "At Dehradoon Public Senior Secondary School, we believe education is more than academics — it's the joyful journey of discovering one's true potential. Our endeavour is to nurture inquisitive minds, kind hearts and confident voices. Every child here is celebrated as unique, and our dedicated faculty walks alongside each student, helping them shine brightly in their own way. Together with our parent community, we are building a generation of compassionate leaders ready to embrace tomorrow with courage and integrity.",
-  signature: "— Mrs. Ashish Shukla",
+  signature: "— Mrs. Ashissh Shuklaa",
 };
 
 export const seedGallery = [
