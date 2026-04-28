@@ -61,7 +61,7 @@ export const seedStaff = [
 ];
 
 export const PRINCIPAL = {
-  name: "Mrs. Ashish Shukla",
+  name: "Mr. Ashish Shukla",
   title: "Principal",
   photo: principalPhoto,
   message:
