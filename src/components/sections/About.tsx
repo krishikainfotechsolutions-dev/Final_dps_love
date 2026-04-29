@@ -80,7 +80,7 @@ export default function About() {
             <div className="mt-5 h-px w-24 bg-gradient-to-r from-primary/40 via-gold/50 to-transparent" />
             <p className="mt-5 text-muted-foreground leading-relaxed">
               Dehradoon Public Senior Secondary School, established in 1992, stands as a symbol of quality education, discipline, and excellence. Since its inception, the school has been dedicated to nurturing young minds and shaping them into responsible and capable individuals. With a strong foundation built over decades, the institution has consistently focused on academic brilliance along with the overall development of students.
-<br>
+<br />
 The school believes in providing a balanced education that integrates traditional values with modern teaching methodologies. Over the years, Dehradoon Public Senior Secondary School has earned a reputation for maintaining high standards in education, discipline, and co-curricular activities. The aim is not only to educate students but also to empower them with confidence, creativity, and strong moral character to face the challenges of the modern world.
             </p>
 
