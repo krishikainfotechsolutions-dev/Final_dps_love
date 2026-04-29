@@ -73,7 +73,7 @@ export const PRINCIPAL = {
   photo: principalPhoto,
   message:
     "Dehradoon Public Senior Secondary School is managed by a visionary and experienced management team that is deeply committed to educational excellence. The management ensures that the school maintains high standards in academics, discipline, infrastructure, and student welfare.
-<br />
+<br /><br />
 Through proper planning, continuous monitoring, and innovative initiatives, the management plays a crucial role in creating a positive and progressive learning atmosphere. Their dedication and guidance have been instrumental in the consistent growth and success of the institution since 1992.",
   signature: "— Mr. Ashissh Shuklaa",
 };
