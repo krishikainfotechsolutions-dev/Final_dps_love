@@ -68,12 +68,14 @@ export const seedStaff = [
 ];
 
 export const PRINCIPAL = {
-  name: "Mr. Ashish Shukla",
+  name: "Mr. Ashissh Shuklaa",
   title: "Principal",
   photo: principalPhoto,
   message:
-    "At Dehradoon Public Senior Secondary School, we believe education is more than academics — it's the joyful journey of discovering one's true potential. As an NCERT English Medium institution serving students from Play Group to Class 12, our endeavour is to nurture inquisitive minds, kind hearts and confident voices. Every child here is celebrated as unique, and our dedicated faculty walks alongside each student, helping them shine brightly in their own way. Together with our parent community, we are building a generation of compassionate leaders ready to embrace tomorrow with courage and integrity.",
-  signature: "— Mr. Ashish Shukla",
+    "Dehradoon Public Senior Secondary School is managed by a visionary and experienced management team that is deeply committed to educational excellence. The management ensures that the school maintains high standards in academics, discipline, infrastructure, and student welfare.
+<br />
+Through proper planning, continuous monitoring, and innovative initiatives, the management plays a crucial role in creating a positive and progressive learning atmosphere. Their dedication and guidance have been instrumental in the consistent growth and success of the institution since 1992.",
+  signature: "— Mr. Ashissh Shuklaa",
 };
 
 export const seedGallery = [
