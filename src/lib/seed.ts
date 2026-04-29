@@ -7,9 +7,7 @@ import indep2 from "@/assets/event-independence-2.jpg";
 import janm1 from "@/assets/event-janmashtami-1.jpg";
 import janm2 from "@/assets/event-janmashtami-2.jpg";
 
-<p className="whitespace-pre-line">
-  {PRINCIPAL.message}
-</p>
+
   
 export const SCHOOL = {
   name: "Dehradoon Public Senior Secondary School",
