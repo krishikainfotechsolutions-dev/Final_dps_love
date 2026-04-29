@@ -7,6 +7,10 @@ import indep2 from "@/assets/event-independence-2.jpg";
 import janm1 from "@/assets/event-janmashtami-1.jpg";
 import janm2 from "@/assets/event-janmashtami-2.jpg";
 
+<p className="whitespace-pre-line">
+  {PRINCIPAL.message}
+</p>
+  
 export const SCHOOL = {
   name: "Dehradoon Public Senior Secondary School",
   shortName: "DPS Kanpur",
@@ -14,7 +18,7 @@ export const SCHOOL = {
   city: "Kanpur",
   phone: "+919519757195",
   whatsapp: "919519757195",
-  email: "info@dehradoonpublicschool.in",
+  email: "Dehradoon.Org@gmail.com",
   address: "34 Gopal Nagar, Kanpur, Uttar Pradesh",
   board: "NCERT Curriculum (PG to Class 12)",
   medium: "English Medium",
@@ -71,13 +75,11 @@ export const PRINCIPAL = {
   name: "Mr. Ashissh Shuklaa",
   title: "Principal",
   photo: principalPhoto,
-  message:
-    "Dehradoon Public Senior Secondary School is managed by a visionary and experienced management team that is deeply committed to educational excellence. The management ensures that the school maintains high standards in academics, discipline, infrastructure, and student welfare.
-\n
-Through proper planning, continuous monitoring, and innovative initiatives, the management plays a crucial role in creating a positive and progressive learning atmosphere. Their dedication and guidance have been instrumental in the consistent growth and success of the institution since 1992.",
+  message: `Dehradoon Public Senior Secondary School is managed by a visionary and experienced management team that is deeply committed to educational excellence. The management ensures that the school maintains high standards in academics, discipline, infrastructure, and student welfare.
+
+Through proper planning, continuous monitoring, and innovative initiatives, the management plays a crucial role in creating a positive and progressive learning atmosphere. Their dedication and guidance have been instrumental in the consistent growth and success of the institution since 1992.`,
   signature: "— Mr. Ashissh Shuklaa",
 };
-
 export const seedGallery = [
   { id: "g1", title: "Independence Day", category: "Independence Day", type: "image" as const, url: indep1 },
   { id: "g2", title: "Tricolor Spirit", category: "Independence Day", type: "image" as const, url: indep2 },
