@@ -32,7 +32,7 @@ export default function Hero() {
           src={campusBg}
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
           loading="eager"
           decoding="async"
         />
