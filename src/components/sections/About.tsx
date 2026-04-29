@@ -4,7 +4,9 @@ import SectionHeader from "@/components/SectionHeader";
 import { fadeUp, viewportOnce } from "@/lib/motion";
 import campusBg from "@/assets/campus-1.jpg";
 import { useIsMobile } from "@/hooks/use-mobile";
-
+<p className="whitespace-pre-line">
+  {PRINCIPAL.message}
+</p>
 const stats = [
   { icon: GraduationCap, value: "34+", label: "Years" },
   { icon: Users, value: "560+", label: "Students" },
