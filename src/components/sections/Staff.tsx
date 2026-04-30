@@ -97,8 +97,77 @@ export default function Staff() {
               className="rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 flex flex-col"
             >
               {/* IMAGE */}
-              <div className="relative w-full h-64">
+              <div className="relative w-full h-64 pb-12">
                 <img
+                  src={s.photo}
+                  alt={s.name}
+                  loading="lazy"
+                  className="w-full h-full object-cover object-top"
+                  style={{
+                    objectPosition: s._imgPosition ?? "center top",
+                    transform: s._imgZoom && s._imgZoom !== 1 ? `scale(${s._imgZoom})` : undefined,
+                    transformOrigin: s._imgPosition ?? "center top",
+                  }}
+                />
+
+                {/* OVERLAY */}
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-green-700 via-green-600/70 to-transparent p-3">
+                  <p className="text-[11px] uppercase tracking-wide text-yellow-300 font-semibold line-clamp-1">
+                    {s.role}
+                  </p>
+                  <h3 className="text-sm font-bold text-white leading-tight line-clamp-2">
+                    {s.name}
+                  </h3>
+                </div>
+              </div>
+
+              {/* CONTENT */}
+              <div className="p-3 flex flex-col gap-2 flex-grow">
+                {s.subjects && s.subjects.length > 0 && (
+                  <div className="flex flex-wrap gap-1">
+                    {s.subjects.map((sub: string) => (
+                      <span
+                        key={sub}
+                        className="text-[10px] px-2 py-0.5 rounded-full border border-green-500 text-green-600 bg-green-50 font-medium"
+                      >
+                        {sub}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                {s.bio && (
+                  <p className="text-[11px] text-gray-600 leading-relaxed line-clamp-3">
+                    {s.bio}
+                  </p>
+                )}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {filtered.length === 0 && (
+          <p className="text-center text-muted-foreground mt-10">
+            No faculty matches your search.
+          </p>
+        )}
+
+        {filtered.length > INITIAL_VISIBLE && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={() => setShowAll((v) => !v)}
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary text-primary-foreground font-medium shadow-card hover:shadow-elegant transition-all"
+            >
+              {showAll
+                ? (<>Show less <ChevronUp className="w-4 h-4" /></>)
+                : (<>View all {filtered.length} <ChevronDown className="w-4 h-4" /></>)}
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}                <img
                   src={s.photo}
                   alt={s.name}
                   loading="lazy"
