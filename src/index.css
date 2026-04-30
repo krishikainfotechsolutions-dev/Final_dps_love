@@ -169,6 +169,34 @@ All colors MUST be HSL.
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+  /* Styled thin scrollbar for scroll panels (KeyDates sidebar, dropdown menus) */
+  .scroll-panel::-webkit-scrollbar {
+    width: 4px;
+  }
+  .scroll-panel::-webkit-scrollbar-track {
+    background: hsl(145 20% 95%);
+    border-radius: 99px;
+  }
+  .scroll-panel::-webkit-scrollbar-thumb {
+    background: hsl(145 83% 60% / 0.5);
+    border-radius: 99px;
+  }
+  .scroll-panel::-webkit-scrollbar-thumb:hover {
+    background: hsl(145 83% 26% / 0.7);
+  }
+  .scroll-panel {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(145 83% 60% / 0.4) hsl(145 20% 95%);
+  }
+
+  /* Section visual separator — applied via inline styles on each section */
+  .section-divider-top {
+    border-top: 1px solid hsl(145 30% 88%);
+  }
+  .section-divider-bottom {
+    border-bottom: 1px solid hsl(145 30% 88%);
+  }
+
   @keyframes shimmer {
     0% { background-position: -200% 0; }
     100% { background-position: 200% 0; }
