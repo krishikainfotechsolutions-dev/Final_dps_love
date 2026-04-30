@@ -188,29 +188,10 @@ export default function Staff() {
                     {s.name}
                   </h3>
                 </div>
-              </div>
+            
 
               {/* CONTENT */}
-              <div className="p-3 flex flex-col gap-2 flex-grow">
-                {s.subjects && s.subjects.length > 0 && (
-                  <div className="flex flex-wrap gap-1">
-                    {s.subjects.map((sub: string) => (
-                      <span
-                        key={sub}
-                        className="text-[10px] px-2 py-0.5 rounded-full border border-green-500 text-green-600 bg-green-50 font-medium"
-                      >
-                        {sub}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                {s.bio && (
-                  <p className="text-[11px] text-gray-600 leading-relaxed line-clamp-3">
-                    {s.bio}
-                  </p>
-                )}
-              </div>
+              
             </motion.div>
           ))}
         </motion.div>
@@ -229,7 +210,30 @@ export default function Staff() {
             >
               {showAll
                 ? (<>Show less <ChevronUp className="w-4 h-4" /></>)
-                : (<>View all {filtered.length} <ChevronDown className="w-4 h-4" /></>)}
+                : (<>View all </div>
+
+{/* CONTENT */}
+<div className="p-3 flex flex-col gap-2 flex-grow">
+  {s.subjects && s.subjects.length > 0 && (
+    <div className="flex flex-wrap gap-1">
+      {s.subjects.map((sub: string) => (
+        <span
+          key={sub}
+          className="text-[10px] px-2 py-0.5 rounded-full border border-green-500 text-green-600 bg-green-50 font-medium"
+        >
+          {sub}
+        </span>
+      ))}
+    </div>
+  )}
+
+  {s.bio && (
+    <p className="text-[11px] text-gray-600 leading-relaxed line-clamp-3">
+      {s.bio}
+    </p>
+  )}
+</div>
+              {filtered.length} <ChevronDown className="w-4 h-4" /></>)}
             </button>
           </div>
         )}
