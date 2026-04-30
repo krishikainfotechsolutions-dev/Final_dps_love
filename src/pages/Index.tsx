@@ -14,7 +14,7 @@ import Staff from "@/components/sections/Staff";
 import Gallery from "@/components/sections/Gallery";
 import Toppers from "@/components/sections/Toppers";
 import KeyDates from "@/components/sections/KeyDates";
-import Awards from "@/components/sections/Awards";
+import Awards from "@/components/sections/Awards"; 
 import Facilities from "@/components/sections/Facilities";
 import Contact from "@/components/sections/Contact";
 import { SCHOOL } from "@/lib/seed";
