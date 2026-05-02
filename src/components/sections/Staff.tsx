@@ -118,86 +118,75 @@ export default function Staff() {
             <motion.div
               key={s.id}
               variants={fadeUp}
-              className="rounded-2xl shadow-card overflow-hidden hover-lift flex flex-col"
+              className="hover-lift"
               style={{
+                padding: "2px",
+                borderRadius: "1rem",
                 background:
-                  "linear-gradient(160deg, #ffffff 0%, hsl(145 83% 96%) 60%, hsl(145 60% 92%) 100%)",
-                border: "2px solid transparent",
-                backgroundClip: "padding-box",
-                boxShadow:
-                  "0 0 0 2px transparent, inset 0 0 0 0 transparent",
-                outline: "2px solid transparent",
-                position: "relative",
+                  "linear-gradient(135deg, hsl(145 70% 35%) 0%, hsl(44 94% 50%) 50%, hsl(145 70% 35%) 100%)",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.10)",
               }}
             >
-              {/* Green-golden gradient border overlay */}
+              {/* Inner card */}
               <div
+                className="rounded-[14px] overflow-hidden flex flex-col h-full"
                 style={{
-                  position: "absolute",
-                  inset: 0,
-                  borderRadius: "inherit",
-                  padding: "2px",
                   background:
-                    "linear-gradient(135deg, hsl(145 70% 35%) 0%, hsl(44 94% 50%) 50%, hsl(145 70% 35%) 100%)",
-                  WebkitMask:
-                    "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                  WebkitMaskComposite: "xor",
-                  maskComposite: "exclude",
-                  pointerEvents: "none",
-                  zIndex: 1,
+                    "linear-gradient(160deg, #ffffff 0%, hsl(145 83% 96%) 60%, hsl(145 60% 92%) 100%)",
                 }}
-              />
-              {/* Fixed-ratio image wrapper — prevents tall/short image misalignment */}
-              <div className="relative w-full" style={{ paddingBottom: "100%" }}>
-                <img
-                  src={s.photo}
-                  alt={s.name}
-                  className="absolute inset-0 w-full h-full object-cover object-top"
-                  loading="lazy"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src =
-                      "https://ui-avatars.com/api/?name=" +
-                      encodeURIComponent(s.name) +
-                      "&background=0B7A3B&color=fff&size=200";
-                  }}
-                />
-                {/* Gradient overlay at bottom of image */}
-                <div
-                  className="absolute bottom-0 left-0 right-0 h-8"
-                  style={{
-                    background:
-                      "linear-gradient(to top, hsl(145 83% 96%), transparent)",
-                  }}
-                />
-              </div>
+              >
+                {/* Fixed-ratio image wrapper */}
+                <div className="relative w-full" style={{ paddingBottom: "100%" }}>
+                  <img
+                    src={s.photo}
+                    alt={s.name}
+                    className="absolute inset-0 w-full h-full object-cover object-top"
+                    loading="lazy"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src =
+                        "https://ui-avatars.com/api/?name=" +
+                        encodeURIComponent(s.name) +
+                        "&background=0B7A3B&color=fff&size=200";
+                    }}
+                  />
+                  {/* Gradient overlay at bottom of image */}
+                  <div
+                    className="absolute bottom-0 left-0 right-0 h-8"
+                    style={{
+                      background:
+                        "linear-gradient(to top, hsl(145 83% 96%), transparent)",
+                    }}
+                  />
+                </div>
 
-              {/* Info panel */}
-              <div className="p-3 flex flex-col flex-1">
-                <p className="text-[11px] font-semibold text-primary uppercase tracking-wide leading-tight">
-                  {s.role}
-                </p>
-                <h3 className="font-bold text-sm text-foreground leading-snug mt-0.5">
-                  {s.name}
-                </h3>
-
-                {s.bio && (
-                  <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed line-clamp-2 flex-1">
-                    {s.bio}
+                {/* Info panel */}
+                <div className="p-3 flex flex-col flex-1">
+                  <p className="text-[11px] font-semibold text-primary uppercase tracking-wide leading-tight">
+                    {s.role}
                   </p>
-                )}
+                  <h3 className="font-bold text-sm text-foreground leading-snug mt-0.5">
+                    {s.name}
+                  </h3>
 
-                {s.subjects && s.subjects.length > 0 && (
-                  <div className="flex flex-wrap gap-1 mt-2">
-                    {s.subjects.map((sub: string) => (
-                      <span
-                        key={sub}
-                        className="text-[10px] border border-primary/20 bg-primary/5 text-primary px-2 py-0.5 rounded-full font-medium"
-                      >
-                        {sub}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                  {s.bio && (
+                    <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed line-clamp-2 flex-1">
+                      {s.bio}
+                    </p>
+                  )}
+
+                  {s.subjects && s.subjects.length > 0 && (
+                    <div className="flex flex-wrap gap-1 mt-2">
+                      {s.subjects.map((sub: string) => (
+                        <span
+                          key={sub}
+                          className="text-[10px] border border-primary/20 bg-primary/5 text-primary px-2 py-0.5 rounded-full font-medium"
+                        >
+                          {sub}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -221,4 +210,4 @@ export default function Staff() {
       </div>
     </section>
   );
-}
+          }
