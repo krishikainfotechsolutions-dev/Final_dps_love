@@ -115,16 +115,18 @@ export default function Staff() {
           // Each row height is fixed so all cards in the same row align perfectly
         >
           {visible.map((s: any) => (
-           <motion.div
-  key={s.id}
-  variants={fadeUp}
-  className="hover-lift"
-  style={{
-    borderRadius: "1rem",
-    boxShadow: "0 4px 16px rgba(0,0,0,0.08)", // optional softer shadow
-    background: "#ffffff", // clean white
-  }}
->
+            <motion.div
+              key={s.id}
+              variants={fadeUp}
+              className="hover-lift"
+              style={{
+                padding: "2px",
+                borderRadius: "1rem",
+                background:
+                  "linear-gradient(135deg, hsl(145 70% 35%) 0%, hsl(44 94% 50%) 50%, hsl(145 70% 35%) 100%)",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.10)",
+              }}
+            >
               {/* Inner card */}
               <div
                 className="rounded-[14px] overflow-hidden flex flex-col h-full"
@@ -208,4 +210,4 @@ export default function Staff() {
       </div>
     </section>
   );
-          }
+}
