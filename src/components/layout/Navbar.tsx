@@ -88,7 +88,7 @@ export default function Navbar() {
             <Button asChild size="sm" variant="outline" className="hidden md:inline-flex border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground">
               <Link to={adminHref}><Shield className="w-4 h-4" /> {isAdmin ? "Dashboard" : "Admin"}</Link>
             </Button>
-            <Button onClick={() => go("contact")} size="sm" className="bg-gold text-gold-foreground hover:opacity-90 hidden md:inline-flex">
+            <Button onClick={() => go("admission-enquiry")} size="sm" className="bg-gold text-gold-foreground hover:opacity-90 hidden md:inline-flex">
               Apply Now
             </Button>
             <button onClick={() => setOpen((v) => !v)} className="lg:hidden p-2 rounded-lg hover:bg-primary/10" aria-label="Menu">
@@ -114,7 +114,7 @@ export default function Navbar() {
               </div>
               <div className="mt-3 flex gap-2">
                 <Button asChild size="sm" variant="outline" className="flex-1 border-primary/30 text-primary"><Link to={adminHref}>{isAdmin ? "Dashboard" : "Admin"}</Link></Button>
-                <Button onClick={() => go("contact")} size="sm" className="flex-1 bg-gold text-gold-foreground">Apply Now</Button>
+                <Button onClick={() => go("admission-enquiry")} size="sm" className="flex-1 bg-gold text-gold-foreground">Apply Now</Button>
               </div>
             </motion.div>
           )}
