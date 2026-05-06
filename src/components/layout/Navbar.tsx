@@ -20,6 +20,7 @@ const links = [
   { id: "gallery", label: "Gallery" },
   { id: "toppers", label: "Toppers" },
   { id: "key-dates", label: "Calendar" },
+  { id: "exams", label: "Exams" },
   { id: "awards", label: "Awards" },
   { id: "facilities", label: "Facilities" },
   { id: "contact", label: "Contact" },
