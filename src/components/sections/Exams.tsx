@@ -76,7 +76,7 @@ function ExamCard({ exam, index }: { exam: any; index: number }) {
             <span className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
               <FileText className="w-3 h-3" />
             </span>
-            View Syllabi ({exam.syllabi.length} class{exam.syllabi.length !== 1 ? "es" : ""})
+            View Syllabus ({exam.syllabi.length} class{exam.syllabi.length !== 1 ? "es" : ""})
             <ChevronDown className={cn("w-4 h-4 transition-transform duration-200", open && "rotate-180")} />
           </button>
         )}
