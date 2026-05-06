@@ -25,7 +25,7 @@ function ExamCard({ exam, index }: { exam: any; index: number }) {
     border: "border-gray-200",
     dot: "bg-gray-400",
   };
-
+ 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
