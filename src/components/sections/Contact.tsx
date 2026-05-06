@@ -50,7 +50,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={viewportOnce} className="rounded-3xl p-8 bg-card border shadow-card">
+          <motion.div id="admission-enquiry" variants={fadeUp} initial="hidden" whileInView="show" viewport={viewportOnce} className="rounded-3xl p-8 bg-card border shadow-card">
             <h3 className="text-xl font-bold text-primary mb-1">Admission Enquiry</h3>
             <p className="text-sm text-muted-foreground mb-6">Fill in your details and we'll connect with you on WhatsApp.</p>
             <form onSubmit={handleSubmit} className="space-y-4">
