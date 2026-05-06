@@ -145,7 +145,7 @@ export default function Admission() {
         {/* Apply Now CTA */}
         <div className="mt-10 text-center">
           <button
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+            onClick={() => document.getElementById("admission-enquiry")?.scrollIntoView({ behavior: "smooth", block: "start" })}
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold text-gold-foreground font-bold rounded-full text-base shadow-card hover:opacity-90 transition-opacity"
           >
             Apply Now
