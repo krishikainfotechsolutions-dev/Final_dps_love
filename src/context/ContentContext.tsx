@@ -17,7 +17,7 @@ type ContentCtx = {
   liveMode: boolean;
 };
 
-const Ctx = createContext<ContentCtx | undefined>(undefined);
+const Ctx = createContext<ContentCtx | undefined>(undefined); 
 
 const collections = ["notices", "events", "staff", "gallery", "toppers", "keyDates", "awards", "exams"] as const;
 
