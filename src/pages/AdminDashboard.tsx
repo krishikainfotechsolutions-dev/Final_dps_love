@@ -3,7 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import {
   LogOut, Database, Image, Users, Bell, Calendar, Trophy, Award,
   Plus, Pencil, Trash2, X, Save, Pin, ChevronLeft, Upload, Loader2, Rocket,
-  BookOpen, FileText
+  BookOpen, FileText 
 } from "lucide-react";
 import SeedImport from "./SeedImport";
 import { Button } from "@/components/ui/button";
