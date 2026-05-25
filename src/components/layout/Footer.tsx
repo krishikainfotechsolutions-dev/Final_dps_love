@@ -72,7 +72,7 @@ export default function Footer() {
         <div className="border-t border-white/10 mt-10 pt-6 text-xs opacity-70 flex flex-col md:flex-row justify-between gap-2">
           <p>© {new Date().getFullYear()} {SCHOOL.name}. All rights reserved.</p>
           <p>{SCHOOL.tagline}</p>
-          <p>Built by <a href="https://krishikainfotechsolutions.netlify.com" target="_blank" rel="noopener noreferrer" className="text-gold hover:opacity-100 underline underline-offset-2">Krishika Infotech Solutions</a></p>
+          <p>Built by <a href="https://krishikainfotechsolutions.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gold hover:opacity-100 underline underline-offset-2">Krishika Infotech Solutions</a></p>
         </div>
       </div>
     </footer>
