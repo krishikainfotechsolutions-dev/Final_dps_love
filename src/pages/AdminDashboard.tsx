@@ -973,5 +973,5 @@ export default function AdminDashboard() {
       </main>
       {showSeed && <SeedImport onClose={() => setShowSeed(false)} />}
     </div>
-  );
+  ); 
 }
